@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			@keyframes mymove {
+				from {
+					width: 100px;
+				}
+
+				to {
+					width: 200px;
+				}
+			}
+
+			.emotion {
+				-webkit-animation: mymove 5s infinite;
+			}
+			.init {
+				margin-top: 20px;
+				background-color: #66ccff;
+				width: 100px;
+				height: 100px;
+			}
+			.emotion1{
+				transition: width 2s,height 2s,background-color 2s;
+				text-align: center;
+				background-color: #66CCFF;
+			}
+			.emotion1:hover{
+				width: 200px;
+				height: 200px;
+				background-color: red;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="init emotion"></div>
+		<div class="init emotion1">I want big gun.</div>
+	</body>
+</html>

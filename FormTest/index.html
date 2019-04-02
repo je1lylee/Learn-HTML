@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="index.css"/>
+	</head>
+	<body>
+		<div class="container">		
+			<div class="form">
+				<form action="http://www.meishihui68.com.cn/FormTest.ashx" method="post" enctype="multipart/form-data">
+					<div>
+					<label>姓名：</label>
+					<input placeholder="请输入用户名" name="uname" type="text" />
+					<button type="button">检查用户名是否存在</button>
+					</div>
+					<div>
+						<label>密码：</label>
+						<input placeholder="请输入密码" name="upass" type="password" />
+					</div>
+					<div>
+						<label>区域：</label>
+						<select name="uprov">
+							<option value="sichuan">四川省</option>
+							<option value="chengdus">成都市</option>
+							<option value="dujiangyan">都江堰市</option>
+							<option value="nsuedu">成都东软学院</option>
+						</select>
+					</div>
+					<div>
+						<label>年龄：</label>
+						<input type="number" name="uage" max="100" min="0"/>
+					</div>
+					<div>
+					<label>性别：</label>
+					<input type="radio" value="male" name="ugender"/>
+					<span>男</span>
+					<input type="radio" value="female" name="ugender"/>
+					<span>女</span>
+					</div>
+					<div>
+						<label>生日：</label>
+						<input type="date" name="udate"/>
+					</div>
+					<div>
+						<label>手机：</label>
+						<input type="number" name="utel" />
+					</div>
+					<div>
+						<label>头像：</label>
+						<input type="file" name="uphoto" />
+					</div>
+					<div>
+						<label>主页：</label>
+						<input type="url" name="uurl" />
+					</div>
+					<div>
+						<label>Email：</label>
+						<input type="email" name="uemail" />
+					</div>
+					<div>
+						<label>背景色：</label>
+						<input type="color" name="ubackcolor" />
+					</div>
+					<input type="submit" value="注册" />
+					<input type="reset" value="取消" />
+				</form>
+			</div>			
+		</div>
+	</body>
+</html>

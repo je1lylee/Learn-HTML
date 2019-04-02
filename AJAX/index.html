@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Jquery Learn</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script src="../js/jquery-3.3.1.js"></script>
+		<!-- 本机JS库 -->
+		<script src="index.js"></script>
+		<link rel="stylesheet" type="text/css" href="index.css"/>
+		<!-- 自定义JS -->
+	</head>
+	<body>
+		<div class="test">123啊哈哈哈哈哈</div>
+		<div id="mydiv"></div> 
+		<script type="text/javascript">
+			$(function(){
+				$("#mydiv").bind({
+					"click":function(){
+						console.log("div被点击");
+					},
+					"mouseover":function(){
+						console.log("鼠标经过div");
+						document.getElementById("mydiv").style.backgroundColor="blue";
+					},
+					"mouseout":function(){
+						console.log("鼠标离开div");
+						document.getElementById("mydiv").style.backgroundColor="red";
+					}
+				});
+				$("#mydiv").trigger("click");
+			})
+		</script>
+	</body>
+</html> 
