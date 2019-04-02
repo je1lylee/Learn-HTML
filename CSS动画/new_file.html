@@ -2,41 +2,48 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title></title>
+		<title>ROTATE DEMO</title>
 		<style>
-			@keyframes mymove {
+			@keyframes CD {
 				from {
-					width: 100px;
+					transform: rotate(0deg);
 				}
 
 				to {
-					width: 200px;
+					transform: rotate(360deg);
 				}
 			}
 
-			.emotion {
-				-webkit-animation: mymove 5s infinite;
+			.cd_container {
+				width: 500px;
+				height: 500px;
+				position: relative;
 			}
-			.init {
-				margin-top: 20px;
-				background-color: #66ccff;
-				width: 100px;
-				height: 100px;
+
+			.cd_pir {
+				height: 50%;
+				width: 50%;
+				background-size: 100% 100%;
+				background-image: url(MichaelBolton.jpg);
+				position: absolute;
+				border-radius: 50% 50%;
+				animation: CD 5s infinite linear;
 			}
-			.emotion1{
-				transition: width 2s,height 2s,background-color 2s;
-				text-align: center;
-				background-color: #66CCFF;
-			}
-			.emotion1:hover{
-				width: 200px;
-				height: 200px;
-				background-color: red;
+
+			.cd_mask {
+				width: 50%;
+				height: 50%;
+				background-size: 100% 100%;
+				background-image: url(cd.png);
+				position: absolute;
+
 			}
 		</style>
 	</head>
 	<body>
-		<div class="init emotion"></div>
-		<div class="init emotion1">I want big gun.</div>
+		<div class="cd_container">
+			<div class="cd_pir"></div>
+			<div class="cd_mask"></div>
+		</div>
 	</body>
 </html>

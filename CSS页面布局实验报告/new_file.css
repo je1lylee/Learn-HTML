@@ -1,0 +1,26 @@
+body{
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+.container{
+	width: 980px;
+	margin:0 auto
+}
+.nav{
+	height: 150px;
+	background-color: blue;
+	text-align: center;
+}
+.left{
+	display: inline-block;
+	height: 450px;
+	width: 30%;
+	background-color: orange;
+}
+.right{
+	height: 450px;
+	float: right;
+	width: 70%;
+	background-color:skyblue;
+}
