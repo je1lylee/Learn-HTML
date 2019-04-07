@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0, user-scalable=no" />
+		<title>动态移除节点</title>	
+		<style>
+			div{
+				margin: 0 auto;
+				text-align: center;
+			}
+			#parent{
+				width: 200px;
+				height: 200px;
+				background-color: yellow;
+			}
+			#child{
+				width: 100px;
+				height: 100px;
+				background-color: red;
+				color:#fff;
+				font-weight: bold;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="parent">
+			<div id="child">
+			    HELLO HTML5
+			</div>
+		</div>
+		<button id="xbutton">移除子节点</button>
+		<script>
+			var oDiv=document.getElementById("child");
+			// oDiv.parentNode.removeChild(oDiv);//oDiv的父节点的移除子节点方法
+			var cDiv = document.getElementById("parent");
+			var xbutton = document.getElementById("xbutton");
+			xbutton.onclick = function(){
+				cDiv.removeChild(oDiv);
+				alert("红色子节点移除");
+			}
+		</script>
+	</body>
+</html>

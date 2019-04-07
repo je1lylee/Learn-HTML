@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0, user-scalable=no" />
+		<title>动态替换节点使用示例</title>
+	</head>
+	<body>
+		<ul id="dataList">
+			<li>XHTML</li>
+			<li>CSS</li>
+			<li>JavaScript</li>
+		</ul>
+		<button id="xbutton">替换第一个子项</button>
+		<script>
+			var xbutton = document.getElementById("xbutton");
+			var dList = document.getElementById("dataList");//确定ul
+			var oLi = document.querySelector("#dataList li:first-child");//查询子项 dataList的li的第一个子项
+			var nLi = document.createElement("li");
+			nLi.innerText = "HTML5";
+			xbutton.onclick = function(){
+				dList.replaceChild(nLi,oLi);
+			}
+		</script>
+	</body>
+</html>

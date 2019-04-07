@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>cloneNode方法使用示例</title>
+		<style>
+			.mylist{ 
+				/* 拷贝元素时同样会拷贝元素的id和class */
+				width: 200px;
+				height: 100px;
+				background-color: yellow;
+			}
+		</style>
+	</head>
+	<body>
+		<button id="mybutton0">深拷贝</button>
+		<button id="mybutton1">浅拷贝</button>
+		<div id="content">
+			<ul class="mylist">
+				<li>HTML5</li>
+				<li>CSS3</li>
+				<li>JavaScript</li>
+			</ul>
+		</div>
+		<script>
+			var oDiv = document.getElementById("content");
+			var oUl = document.getElementsByClassName("mylist")[0];
+			document.getElementById("mybutton0").onclick = function(){
+				oDiv.appendChild(oUl.cloneNode(true));//插入子节点的方法
+			}
+			document.getElementById("mybutton1").onclick = function(){
+				oDiv.appendChild(oUl.cloneNode(false));
+			}
+		</script>
+	</body>
+</html>

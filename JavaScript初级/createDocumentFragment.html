@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0, user-scalable=no" />
+		<title>createDocumentFragment使用示例</title>
+	</head>
+	<body>
+		<button id="mybutton">添加1W个项目</button>
+		<ul id="dataList">
+		</ul>
+		<script>
+			var dList = document.getElementById("dataList");//确定list
+			var fragment = document.createDocumentFragment();//创建文档片段
+			for(var i = 0; i < 10000; i++) {
+				var oLi = document.createElement("li");
+				oLi.innerText = "Item" + (i + 1);
+				fragment.appendChild(oLi);//逐个把子节点添加进fragment
+			}
+			document.getElementById("mybutton").onclick = function(){
+				dList.appendChild(fragment);//把fragment作为子节点插入到dlist中
+			}
+		</script>
+	</body>
+</html>
