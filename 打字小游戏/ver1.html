@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>TypeGame</title>
+		<style>
+			.input {
+				width: 100%;
+				height: 100px;
+				font-size: 20px;
+			}
+		</style>
+	</head>
+	<body onkeyup="uInput()">
+		<div class="container">
+			<h1>leave 1</h1>
+			<h1 id="example0">Happy Every Day</h1>
+			<h1 id="userTyperes">waiting type</h1>
+			<input class="input" id="userType" />
+		</div>
+		<div>
+			<input id="ques" placeholder="请输入问题" />
+			<button id="makeQues" onclick="changeQues()">自定义问题</button>
+			<button onclick="startU()" disabled="disabled">开始</button>
+			<!--开始按钮有问题-->
+		</div>
+		<script>
+			function uInput() {
+				console.log("Message");
+				var res = document.getElementById("userTyperes");
+				var ttype = document.getElementById("userType");
+				var question = document.getElementById("example0");
+				var body = document.getElementsByTagName("body");
+				res.innerHTML = ttype.value;
+					console.log(ttype.value);
+				if(question.innerHTML != res.innerHTML){
+					res.style.color = "red";
+				}else{
+					res.style.color = "black";
+					alert("恭喜您！答案正确！");
+					ttype.value = "恭喜~";
+				}
+			}
+			function changeQues(){
+				var question = document.getElementById("example0");
+				var rQues = document.getElementById("ques");
+				question.innerHTML = rQues.value;
+			}
+			function startU() {
+				var body = document.getElementsByTagName("body");
+				var res = document.getElementById("userTyperes");
+				var ttype = document.getElementById("userType");
+				ttype.value = 'Please Type';
+				body[0].addEventListener("okeyup",uInput(),false);
+				
+			}
+		</script>
+	</body>
+</html>
