@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Class 2</title>
+		<script src="../js/jquery-3.3.1.js"></script>
+		<!-- 引入jQuery -->
+		<style type="text/css">
+			img {
+				width: 190px;
+				height: 90px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="mydiv">
+			<img src="../img/baidu.png" /><br />
+			<img src="../img/sina.png" /><br />
+			<img src="../img/163.png" />
+		</div>
+		<script>
+			$(function() {
+				alert("Change");
+						$("img").each(function(index) {//使用each来遍历所有元素
+							console.log(index+":"+this.src); //jQuery提供this
+							if (index != 1) {
+								this.src = "../img/favicon.png"
+							}
+						});
+					});
+			$(function() {
+				var myArray = ["123","456","789"];
+				$.each(myArray,function(i){
+					console.log("第"+i+"个元素:"+myArray[i])
+				});
+			});
+		</script>
+	</body>
+</html>

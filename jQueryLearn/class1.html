@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Title</title>
+		<script src="../js/jquery-3.3.1.js"></script>
+	</head>
+	<body>
+		<div id="demodiv">
+			demo
+		</div>
+		<button id="demobutton">
+			test
+		</button>
+		<button id="anotherButton">button2</button>
+		<script>
+			//$(selector).action(); JQuery选择器
+			//var demo = $('#demodiv')[0]; //这玩意儿返回数组。。
+			var demo = $("#demodiv"); //可以使用过滤器 :first  只选中第一个对象
+			//demo.innerHTML = "test";
+			demo.text("demotest"); //这个就不用数组了。。
+			var demobutton = $("#demobutton").click("data1", function(e) { //这个地方不是onClick
+				console.log("test")
+			})
+			var button2 = $("#anotherButton").on("click", "", "", function() {
+				console.log("testttttt");
+			})
+		</script>
+	</body>
+</html>
