@@ -14,7 +14,7 @@
 		</div>
 		<div>
 			<input type="text" class="vcode" />
-			<img src="http://www.meishihui68.com.cn/VerifyCode.aspx" title="单击刷新验证码" class="vcodeimg" id="imgcode" />
+			<img src="http://www.meishihui68.com.cn/VerifyCode.aspx" <t></t>itle="单击刷新验证码" class="vcodeimg" id="imgcode" />
 		</div>
 		<div>
 			<a href='#'>注册</a>
@@ -24,10 +24,7 @@
 			var omig = document.getElementById("imgcode");
 			omig.onclick = function(){
 				this.src = "http://www.meishihui68.com.cn/VerifyCode.aspx?"+Math.random();
-			}
-			
-			
-			
+			}		
 		</script>
 	</body>
 </html>
